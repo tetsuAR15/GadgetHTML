@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <a class="pagetop" href="style.css"><div class="pagetop__arrow"></div></a>
+    <!----サイト名------------------------------------------------------------->
+    <title>Gadget Library test段階</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!----タイトルバー-------------------------------------------------------->
+    <div class="title-bar">
+        <a href="backup.html">
+            <h1 class="Ymove">Gadget Library</h1>
+        </a>
+        <button class="btn-menu">メニュー</button>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">iPad</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+<!----サイドバー------------------------------------------------------------------------------------->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">新着記事</a></li>
+                <li><a class="test-font" href="アクセス数ランキング">アクセス数ランキング</a>
+                    <ul>
+                        {% for page, count in ranking %}main
+                        <li>{{ page }}: {{ count }}回</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li><a href="developer_info.html">開発者情報</a></li>
+            </ul>
+        </div>
+<!----おすすめコンテンツ------------------------------------------------------------------------------------->
+        <div class="main-content">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button type="submit">検索</button>
+            </div>
+            <div class="grid-container">
+                <div class="image_text">
+                    <a href="#"><div class="grid-item"><img src="/home/zer0/Emacs/GadgetHTML\s23.jpg" alt="Image 2"></div></a>
+                    <h4>Galaxy S23</h4>
+                </div>
+                <div class="image_text">
+                    <a href="#"><div class="grid-item"><img src="/home/zer0/Emacs/GadgetHTML\nothing_phone(2).jpg" alt="Image 2"></div></a>
+                    <h4>Nothing Phone(2)</h4>
+                </div>
+                <div class="image_text">
+                    <a href="#"><div class="grid-item"><img src="/home/zer0/Emacs/GadgetHTML\nothing_phone(1).webp" alt="Image 2"></div></a>
+                    <h4>Nothing Phone(1)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="move.js"></script>
+    <!----フッター--------------------------------------------------->
+    <footer>
+        <small>制作 雑談ﾓｳﾞｧｲﾙ製作所 2024 1月 18日~
+        </small>
+    </footer>
+</html>
+<!--
+
+`《￣＞―――＜￣》
+　ﾋ／=-　　　-=＼ｿ丶
+　/ /ﾉメｲ人ﾚ∠ﾙ丶丶|
+　ﾚY|(ﾋﾝ　　ﾋﾝ)|| ||
+　 目 ﾞﾞ丶フ ﾞﾞ目)||
+　 |人　　　　 || リ
+　 |ﾉﾙ＞ー―-＜リﾙﾉ
+
+＿人人人人人人人人＿
+＞アベマのパクリ!!＜
+￣ＹＹＹＹＹＹＹＹ￣
+-->
+
