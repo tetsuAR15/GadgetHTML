@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*----タイトル-----------------------*/
+
+.dev_title{
+    font-weight: normal;
+    color: rgba(50, 119, 238, 0.781);
+
+}
+
+/*----画像-------------------------*/
+/*----画像-------------------------*/
+img {
+    transform: scale(0.5);
+    margin-top: 20px; /* テキストとの間のスペースを調整 */
+    margin-bottom: 20px; /* 必要に応じて調整 */
+    /* float: left; */ /* この行をコメントアウトまたは削除 */
+    margin-left: 0; /* 画像をページの左端に寄せる */
+    margin-right: 0; /* 必要に応じて調整 */
+}
+
+a{
+    width: 300px;
+    height: 300px;
+    border: solid 1px black;
+ }

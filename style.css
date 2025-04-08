@@ -1,0 +1,332 @@
+/*ページトップに戻るやつ*/
+html {
+  scroll-behavior: smooth;
+}
+/*----基本装飾---------------------------------------------------------------------*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto',sans-serif;
+  }
+  
+  li {
+    margin: 2rem 0;
+  }
+/*---------------------------------たしかここがページトップに戻るやつ--------------------------------*/
+.pagetop {
+
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #ddd(225, 0, 255);
+  border: solid 2px #000;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.pagetop__arrow {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: translateY(20%) rotate(-45deg);
+}
+/*新田 実験 2024/2/7 実験失敗*
+html {
+  scroll-behavior: smooth;
+}
+.pagetop {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #fff;
+  border: solid 2px #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.pagetop__arrow {
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: translateY(20%) rotate(-45deg);
+}
+/*実験終了*/
+.title-bar {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+    color: #000000; /* テキストの色 */
+    text-align: left;
+    padding: 10px ;
+}
+.title-bar a {
+  font-size: 30px;
+  color: inherit; /* 親要素の色を継承 */
+}
+a {
+  text-decoration: none; /* 下線を除去 */
+  color: blue; /* リンクの色を変更 */
+  font-weight: normal; /* フォントの太さを通常に */
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: underline; /* ホバー時に下線を表示 */
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* その他のスタイリング */
+}
+
+
+/*----サイドバー---------------------------------------------------------------------*/
+
+.sidebar {
+        flex: 0 0 250px;
+        width: 250px;
+        font-size: x-large;
+        background-color: #edfff5;
+        color: rgb(0, 0, 0);
+        padding: 20px;
+        height: auto; /* 画面の高さいっぱいにする */
+        position: sticky; /* スクロールしても位置を固定する */
+        top: 0;
+}
+    
+
+.sidebar ul {
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-align: left; 
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.content {
+    padding-bottom: 50px;
+    display: flex;
+    flex: 1;
+}
+
+/*サイドバーリンクの色*/
+.test-font{
+  color: red;
+}
+
+/*-------------------------------------------------------------------------*/
+.search-box {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.search-box input[type="text"] {
+    width: 70%; /* 検索バーの横の長さを70%に設定 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 40px; /* 高さを統一 */
+    vertical-align: middle;
+}
+
+/* ボタンのスタイルは変更なし */
+.search-box button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7fb9fc;
+    color: white;
+    border: none;
+    height: 50px; /* 高さを統一 */
+    border-radius: 4px;
+    vertical-align: middle;
+}
+/*-------------------------------------------------------------------------*/
+footer{
+  width: 100%;
+  background: #333; /* フッターの背景色 */
+  color: white; /* フッターの文字色 */
+  text-align: center;
+  padding: 10px 0; /* 上下のパディング */
+}
+/*----------------------------実験1----------------------------------------*/
+/* スタイルの例 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* 親要素の右端から配置 */
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+} 
+  /* リスト項目のスタイル */
+.sidebar li {
+    position: relative; /* ドロップダウン位置の基準点 */
+    list-style: none;
+}  
+/*----------------------------実験1終了------------------------------------*/
+
+.main-content{
+    flex: 1;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 画像が少なくとも200pxの幅で並ぶように設定 */
+  grid-gap: 20px; /* グリッドアイテム間の隙間 */
+  padding: 10px; /* コンテナのパディング */
+    background-size: 100%; /* 画像をデフォルトで10%大きく設定 */
+    transition: background-size 0.3s ease; 
+}
+.grid-item{
+  background-color: #f0f0f0; /* 背景色 */
+    overflow: hidden; /* 画像がアイテムを超えた場合に非表示にする */
+    height: auto; /* 高さは内容に応じて自動調整 */
+    display: flex; /* Flexboxを使用して中身を中央に配置 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+}
+
+.grid-item img {
+  width: 100%; /* 画像をアイテムの幅に合わせる */
+    height: auto; /* 画像の高さを自動調整して縦横比を保持 */
+    object-fit: contain; /* 画像がアイテムに収まるように調整 */
+
+  /* 既存のスタイル */
+}
+
+.grid-item img:hover {
+  background-size: 90%;
+}
+
+/*
+border: 1px solid #000;
+padding: 10px;
+margin: 10px;
+height: auto;
+box-sizing: border-box;
+width: 100%;
+height: auto;
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.grid-item {
+    margin-bottom: 0;
+    background-color: #f0f0f0; /* 背景色を設定 */
+    /*padding: 10px; /* 背景色と画像の間に少しスペースを作る */
+    box-sizing: border-box; 
+    width: 100%;/*横を指定:*/
+    height: 200px; /* 高さを指定 */
+    overflow: hidden; /* haido */
+    object-position: center top;
+}
+.grid-item +h4{
+    margin-top: 0;
+}
+.grid-container h4 {
+    font-size: 22px;
+    background-color: #f0f0f0; /* 背景色を設定 */
+    padding: 10px; /* 上下左右にパディングを追加 */
+    margin: 0; /* マージンをゼロに設定して、grid-item との間隔をなくす */
+    box-sizing: border-box; /* パディングを含めた幅を100%に保つ */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ますく */
+    object-position: center top;
+}
+.grid-container .image_text {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes fademove {
+  from{
+    opacity: 0;
+    transition: translatax(0);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*画像と文字を一体化*/
+.image_text{
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* ボタン */
+.btn-menu {
+  border: 1px solid #999;
+  background: transparent;
+
+  /*paddingrgb(20, 20, 20)rem 1rem;*/
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* メニュー */
+nav {
+    color: #8eff4d;
+  background: rgba(129, 129, 129, 0.822);
+  position: absolute;
+  z-index: 1;
+  top: 3.125rem;
+  right: 0;
+  overflow-x: hidden;
+  text-align: center;
+  width: 0;
+  transition: .5s;
+}
+/* メニューを開いた時 */
+nav.open-menu {
+  width: 100%;
+}
+
